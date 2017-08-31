@@ -21,7 +21,8 @@ class SentOrderController: UIViewController, UITableViewDelegate, UITableViewDat
     @IBOutlet weak var textView: UITextView!
     @IBAction func selectMenu(_ sender: Any) {
 
-        let alertController = UIAlertController(title: "Menu", message: nil, preferredStyle: .actionSheet)
+        
+        let alertController = UIAlertController(title: "甜度冰塊請先填寫下方備註欄後再選擇飲料\n非常感謝囧RZ", message: nil, preferredStyle: .actionSheet)
         for i in 0...self.menuNameArray.count - 1 {
         let name = "\(self.menuNameArray[i])-\(self.menuPriceArray[i])$ "
             let position = UIAlertAction(title: name, style: .default, handler: {
