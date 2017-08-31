@@ -68,12 +68,31 @@ class SelectShopController: UIViewController, UITableViewDelegate, UITableViewDa
     }
     
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        let alertController = UIAlertController(title: "確定開團", message: "", preferredStyle: .alert)
         
-        let ref = FIRDatabase.database().reference().child("Order")
-        let orderRef = ref.childByAutoId()
-        let value: [AnyHashable: Any] = ["shopID": self.shopIdArray[indexPath.row] as Any, "shopName": self.shopNameArray[indexPath.row] as Any]
-        orderRef.updateChildValues(value)
-        self.navigationController?.popViewController(animated: true)
+        let saveAction = UIAlertAction(title: "OK", style: .default, handler: {
+            alert -> Void in
+            
+            let ref = FIRDatabase.database().reference().child("Order")
+            let orderRef = ref.childByAutoId()
+            let value: [AnyHashable: Any] = ["shopID": self.shopIdArray[indexPath.row] as Any, "shopName": self.shopNameArray[indexPath.row] as Any]
+            orderRef.updateChildValues(value)
+            self.navigationController?.popViewController(animated: true)
+            
+        })
+        
+        let cancelAction = UIAlertAction(title: "Cancel", style: .default, handler: {
+            (action : UIAlertAction!) -> Void in
+        })
+        
+        alertController.addTextField { (textField : UITextField!) -> Void in
+            textField.placeholder = "Enter Team Name"
+        }
+        
+        alertController.addAction(saveAction)
+        alertController.addAction(cancelAction)
+        
+        self.present(alertController, animated: true, completion: nil)
     }
     
     func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
