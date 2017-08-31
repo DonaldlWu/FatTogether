@@ -36,7 +36,7 @@ class OrderListController: UIViewController, UITableViewDelegate, UITableViewDat
     }
     
     func fetchOrder() {
-        FIRDatabase.database().reference().child("Order").observe(.childAdded, with: { (snapshot) in
+        Database.database().reference().child("Order").observe(.childAdded, with: { (snapshot) in
             self.orderID.append(snapshot.key)
             if let dictionary = snapshot.value as? [String: Any] {
                 self.orderArray.append(dictionary["shopName"] as! String)

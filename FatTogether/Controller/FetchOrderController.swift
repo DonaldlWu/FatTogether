@@ -36,7 +36,7 @@ class FetchOrderController: UIViewController, UITableViewDelegate, UITableViewDa
         guard let orderID = UserDefaults.standard.string(forKey: "orderID") else {
             return
         }
-        FIRDatabase.database().reference().child("Order").child("\(orderID)").child("list").observe(.childAdded, with: { (snapshot) in
+        Database.database().reference().child("Order").child("\(orderID)").child("list").observe(.childAdded, with: { (snapshot) in
             if let dictionary = snapshot.value as? [String: Any] {
                 self.orderNameArray.append(snapshot.key)
                 let name = snapshot.key

@@ -37,7 +37,7 @@ class SelectShopController: UIViewController, UITableViewDelegate, UITableViewDa
     }
     
     func fetchShop() {
-        FIRDatabase.database().reference().child("Shop").observe(.childAdded, with: { (snapshot) in
+        Database.database().reference().child("Shop").observe(.childAdded, with: { (snapshot) in
             self.shopIdArray.append(snapshot.key)
             if let dictionary = snapshot.value as? [String: Any] {
                 
@@ -73,7 +73,7 @@ class SelectShopController: UIViewController, UITableViewDelegate, UITableViewDa
         let saveAction = UIAlertAction(title: "OK", style: .default, handler: {
             alert -> Void in
             
-            let ref = FIRDatabase.database().reference().child("Order")
+            let ref = Database.database().reference().child("Order")
             let orderRef = ref.childByAutoId()
             let value: [AnyHashable: Any] = ["shopID": self.shopIdArray[indexPath.row] as Any, "shopName": self.shopNameArray[indexPath.row] as Any]
             orderRef.updateChildValues(value)

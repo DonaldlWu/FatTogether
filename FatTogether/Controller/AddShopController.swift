@@ -39,7 +39,7 @@ class AddShopController: UIViewController, UITableViewDelegate, UITableViewDataS
     
     @IBAction func addShop(_ sender: Any) {
         if shopNameTextField.text != "" {
-            let ref = FIRDatabase.database().reference().child("Shop")
+            let ref = Database.database().reference().child("Shop")
             let shopRef = ref.childByAutoId()
             let value: [AnyHashable: Any] = ["shopName": self.shopNameTextField.text as Any, "menuName": self.menuNameArray as Any, "menuPrice": self.menuPriceArray as Any]
             shopRef.updateChildValues(value)

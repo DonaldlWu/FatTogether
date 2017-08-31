@@ -47,7 +47,7 @@ class SentOrderController: UIViewController, UITableViewDelegate, UITableViewDat
             guard let orderID = UserDefaults.standard.string(forKey: "orderID") else {
             return
         }
-        let ref = FIRDatabase.database().reference().child("Order")
+            let ref = Database.database().reference().child("Order")
         let post = ["content": self.tableViewArray]
         let childUpdates = ["/\(orderID)/list/\(nameText.text!)/": post]
         ref.updateChildValues(childUpdates)
@@ -84,7 +84,7 @@ class SentOrderController: UIViewController, UITableViewDelegate, UITableViewDat
         guard let shopKey = UserDefaults.standard.string(forKey: "shopKey") else {
             return
         }
-        FIRDatabase.database().reference().child("Shop").observe(.childAdded, with: { (snapshot) in
+        Database.database().reference().child("Shop").observe(.childAdded, with: { (snapshot) in
             if snapshot.key == shopKey {
                 if let dictionary = snapshot.value as? [String: Any] {
                     self.menuNameArray = dictionary["menuName"] as! [String]
