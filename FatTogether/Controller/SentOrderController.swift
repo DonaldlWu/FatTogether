@@ -23,10 +23,10 @@ class SentOrderController: UIViewController, UITableViewDelegate, UITableViewDat
 
         let alertController = UIAlertController(title: "Menu", message: nil, preferredStyle: .actionSheet)
         for i in 0...self.menuNameArray.count - 1 {
-        let name = "\(self.menuNameArray[i])-\(self.menuPriceArray[i])$"
+        let name = "\(self.menuNameArray[i])-\(self.menuPriceArray[i])$ "
             let position = UIAlertAction(title: name, style: .default, handler: {
                 alert -> Void in
-                self.tableViewArray.append(name)
+                self.tableViewArray.append(name + self.textView.text)
                 DispatchQueue.main.async {
                     self.tableView.reloadData()
                 }
