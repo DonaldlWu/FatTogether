@@ -7,8 +7,16 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		A7D48D083A68AF41A9EB2CE2 /* Pods_FatTogether.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4875C3828E99C5604A1956D3 /* Pods_FatTogether.framework */; };
+		C00BF1B91F579BBA008D6B82 /* OrderTabBarController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C00BF1B81F579BBA008D6B82 /* OrderTabBarController.swift */; };
+		C00BF1BB1F57A1C9008D6B82 /* SentOrderController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C00BF1BA1F57A1C9008D6B82 /* SentOrderController.swift */; };
+		C05D58551F568A9400F0DCDC /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = C0CEB75B1F5680B6008256F5 /* GoogleService-Info.plist */; };
+		C085FD061F569095003DFF2D /* AddShopController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C085FD051F569095003DFF2D /* AddShopController.swift */; };
+		C085FD0A1F56913D003DFF2D /* Menu.swift in Sources */ = {isa = PBXBuildFile; fileRef = C085FD091F56913D003DFF2D /* Menu.swift */; };
+		C085FD0C1F56DF22003DFF2D /* SelectShopController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C085FD0B1F56DF22003DFF2D /* SelectShopController.swift */; };
+		C0AB8FDC1F57C7A80041E104 /* FetchOrderController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C0AB8FDB1F57C7A80041E104 /* FetchOrderController.swift */; };
 		C0CEB7471F5679D5008256F5 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = C0CEB7461F5679D5008256F5 /* AppDelegate.swift */; };
-		C0CEB7491F5679D5008256F5 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C0CEB7481F5679D5008256F5 /* ViewController.swift */; };
+		C0CEB7491F5679D5008256F5 /* OrderListController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C0CEB7481F5679D5008256F5 /* OrderListController.swift */; };
 		C0CEB74C1F5679D5008256F5 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = C0CEB74A1F5679D5008256F5 /* Main.storyboard */; };
 		C0CEB74F1F5679D5008256F5 /* FatTogether.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = C0CEB74D1F5679D5008256F5 /* FatTogether.xcdatamodeld */; };
 		C0CEB7511F5679D5008256F5 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = C0CEB7501F5679D5008256F5 /* Assets.xcassets */; };
@@ -16,14 +24,24 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		4875C3828E99C5604A1956D3 /* Pods_FatTogether.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_FatTogether.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		48FB4B2B32E1696290F9EA5B /* Pods-FatTogether.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-FatTogether.debug.xcconfig"; path = "Pods/Target Support Files/Pods-FatTogether/Pods-FatTogether.debug.xcconfig"; sourceTree = "<group>"; };
+		81FBFCE5344F0DE2B11858A6 /* Pods-FatTogether.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-FatTogether.release.xcconfig"; path = "Pods/Target Support Files/Pods-FatTogether/Pods-FatTogether.release.xcconfig"; sourceTree = "<group>"; };
+		C00BF1B81F579BBA008D6B82 /* OrderTabBarController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OrderTabBarController.swift; sourceTree = "<group>"; };
+		C00BF1BA1F57A1C9008D6B82 /* SentOrderController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SentOrderController.swift; sourceTree = "<group>"; };
+		C085FD051F569095003DFF2D /* AddShopController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddShopController.swift; sourceTree = "<group>"; };
+		C085FD091F56913D003DFF2D /* Menu.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Menu.swift; sourceTree = "<group>"; };
+		C085FD0B1F56DF22003DFF2D /* SelectShopController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SelectShopController.swift; sourceTree = "<group>"; };
+		C0AB8FDB1F57C7A80041E104 /* FetchOrderController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FetchOrderController.swift; sourceTree = "<group>"; };
 		C0CEB7431F5679D5008256F5 /* FatTogether.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = FatTogether.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		C0CEB7461F5679D5008256F5 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		C0CEB7481F5679D5008256F5 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		C0CEB7481F5679D5008256F5 /* OrderListController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OrderListController.swift; sourceTree = "<group>"; };
 		C0CEB74B1F5679D5008256F5 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		C0CEB74E1F5679D5008256F5 /* FatTogether.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = FatTogether.xcdatamodel; sourceTree = "<group>"; };
 		C0CEB7501F5679D5008256F5 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		C0CEB7531F5679D5008256F5 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		C0CEB7551F5679D5008256F5 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		C0CEB75B1F5680B6008256F5 /* GoogleService-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -31,17 +49,58 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				A7D48D083A68AF41A9EB2CE2 /* Pods_FatTogether.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		0F13BB284B144CA387A61B1E /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				48FB4B2B32E1696290F9EA5B /* Pods-FatTogether.debug.xcconfig */,
+				81FBFCE5344F0DE2B11858A6 /* Pods-FatTogether.release.xcconfig */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
+		634F903F5FA3213551F5E449 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				4875C3828E99C5604A1956D3 /* Pods_FatTogether.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		C085FD071F569105003DFF2D /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				C085FD091F56913D003DFF2D /* Menu.swift */,
+			);
+			name = Model;
+			sourceTree = "<group>";
+		};
+		C085FD081F56910F003DFF2D /* Controller */ = {
+			isa = PBXGroup;
+			children = (
+				C0CEB7481F5679D5008256F5 /* OrderListController.swift */,
+				C085FD0B1F56DF22003DFF2D /* SelectShopController.swift */,
+				C085FD051F569095003DFF2D /* AddShopController.swift */,
+				C00BF1B81F579BBA008D6B82 /* OrderTabBarController.swift */,
+				C00BF1BA1F57A1C9008D6B82 /* SentOrderController.swift */,
+				C0AB8FDB1F57C7A80041E104 /* FetchOrderController.swift */,
+			);
+			path = Controller;
+			sourceTree = "<group>";
+		};
 		C0CEB73A1F5679D5008256F5 = {
 			isa = PBXGroup;
 			children = (
 				C0CEB7451F5679D5008256F5 /* FatTogether */,
 				C0CEB7441F5679D5008256F5 /* Products */,
+				0F13BB284B144CA387A61B1E /* Pods */,
+				634F903F5FA3213551F5E449 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -56,12 +115,14 @@
 		C0CEB7451F5679D5008256F5 /* FatTogether */ = {
 			isa = PBXGroup;
 			children = (
+				C085FD071F569105003DFF2D /* Model */,
+				C085FD081F56910F003DFF2D /* Controller */,
 				C0CEB7461F5679D5008256F5 /* AppDelegate.swift */,
-				C0CEB7481F5679D5008256F5 /* ViewController.swift */,
 				C0CEB74A1F5679D5008256F5 /* Main.storyboard */,
 				C0CEB7501F5679D5008256F5 /* Assets.xcassets */,
 				C0CEB7521F5679D5008256F5 /* LaunchScreen.storyboard */,
 				C0CEB7551F5679D5008256F5 /* Info.plist */,
+				C0CEB75B1F5680B6008256F5 /* GoogleService-Info.plist */,
 				C0CEB74D1F5679D5008256F5 /* FatTogether.xcdatamodeld */,
 			);
 			path = FatTogether;
@@ -74,9 +135,12 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = C0CEB7581F5679D5008256F5 /* Build configuration list for PBXNativeTarget "FatTogether" */;
 			buildPhases = (
+				39FBC71D91FF4EF6D5E795C2 /* [CP] Check Pods Manifest.lock */,
 				C0CEB73F1F5679D5008256F5 /* Sources */,
 				C0CEB7401F5679D5008256F5 /* Frameworks */,
 				C0CEB7411F5679D5008256F5 /* Resources */,
+				064D2D16FC6E76AF0E6B6BB1 /* [CP] Embed Pods Frameworks */,
+				5B7360CF39B3704741518BEB /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -127,6 +191,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				C0CEB7541F5679D5008256F5 /* LaunchScreen.storyboard in Resources */,
+				C05D58551F568A9400F0DCDC /* GoogleService-Info.plist in Resources */,
 				C0CEB7511F5679D5008256F5 /* Assets.xcassets in Resources */,
 				C0CEB74C1F5679D5008256F5 /* Main.storyboard in Resources */,
 			);
@@ -134,14 +199,68 @@
 		};
 /* End PBXResourcesBuildPhase section */
 
+/* Begin PBXShellScriptBuildPhase section */
+		064D2D16FC6E76AF0E6B6BB1 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-FatTogether/Pods-FatTogether-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		39FBC71D91FF4EF6D5E795C2 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n";
+			showEnvVarsInLog = 0;
+		};
+		5B7360CF39B3704741518BEB /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-FatTogether/Pods-FatTogether-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
 /* Begin PBXSourcesBuildPhase section */
 		C0CEB73F1F5679D5008256F5 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				C00BF1B91F579BBA008D6B82 /* OrderTabBarController.swift in Sources */,
 				C0CEB74F1F5679D5008256F5 /* FatTogether.xcdatamodeld in Sources */,
-				C0CEB7491F5679D5008256F5 /* ViewController.swift in Sources */,
+				C085FD061F569095003DFF2D /* AddShopController.swift in Sources */,
+				C0AB8FDC1F57C7A80041E104 /* FetchOrderController.swift in Sources */,
+				C0CEB7491F5679D5008256F5 /* OrderListController.swift in Sources */,
 				C0CEB7471F5679D5008256F5 /* AppDelegate.swift in Sources */,
+				C085FD0A1F56913D003DFF2D /* Menu.swift in Sources */,
+				C00BF1BB1F57A1C9008D6B82 /* SentOrderController.swift in Sources */,
+				C085FD0C1F56DF22003DFF2D /* SelectShopController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -276,31 +395,35 @@
 		};
 		C0CEB7591F5679D5008256F5 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 48FB4B2B32E1696290F9EA5B /* Pods-FatTogether.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = Q2CV2P5WWY;
 				INFOPLIST_FILE = FatTogether/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 10.3;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.darren.FatTogether;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 4.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
+				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Debug;
 		};
 		C0CEB75A1F5679D5008256F5 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 81FBFCE5344F0DE2B11858A6 /* Pods-FatTogether.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = Q2CV2P5WWY;
 				INFOPLIST_FILE = FatTogether/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 10.3;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.darren.FatTogether;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 4.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
+				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Release;
 		};

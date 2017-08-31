@@ -1,24 +1,324 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="13122.16" systemVersion="17A277" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="13189.4" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="IaI-XF-Jqk">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13104.12"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13165.3"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
-        <!--View Controller-->
+        <!--合肥中列表-->
         <scene sceneID="tne-QT-ifu">
             <objects>
-                <viewController id="BYZ-38-t0r" customClass="ViewController" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="BYZ-38-t0r" customClass="OrderListController" customModule="FatTogether" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                     </view>
+                    <navigationItem key="navigationItem" title="合肥中列表" id="Zj0-V2-4jL">
+                        <barButtonItem key="rightBarButtonItem" systemItem="add" id="L61-bK-DSp">
+                            <connections>
+                                <segue destination="Nk8-Uw-Vhv" kind="show" id="DKf-BX-pDi"/>
+                            </connections>
+                        </barButtonItem>
+                    </navigationItem>
+                    <connections>
+                        <segue destination="gdp-Qj-rpA" kind="show" identifier="showOrderTabBar" id="x7K-U5-6Aw"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
+            <point key="canvasLocation" x="476" y="132.68365817091455"/>
+        </scene>
+        <!--Title-->
+        <scene sceneID="ftN-fY-xYV">
+            <objects>
+                <viewController id="ozw-wK-9pk" customClass="SentOrderController" customModule="FatTogether" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="Vxv-fy-4Ef">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="訂購人" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="djQ-Ya-jTF">
+                                <rect key="frame" x="16" y="91" width="69" height="21"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <textField opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="KNY-ta-kq6">
+                                <rect key="frame" x="99" y="87" width="176" height="30"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <nil key="textColor"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
+                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleAspectFit" usesAttributedText="YES" translatesAutoresizingMaskIntoConstraints="NO" id="lnQ-xX-zXj">
+                                <rect key="frame" x="68" y="193" width="239" height="107"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <color key="backgroundColor" red="0.87076961990000001" green="1" blue="0.99308544399999998" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <attributedString key="attributedText">
+                                    <fragment content="Placeholder">
+                                        <attributes>
+                                            <font key="NSFont" size="12" name="Helvetica"/>
+                                            <paragraphStyle key="NSParagraphStyle" alignment="left" lineBreakMode="wordWrapping" baseWritingDirection="natural" tighteningFactorForTruncation="0.0"/>
+                                        </attributes>
+                                    </fragment>
+                                </attributedString>
+                                <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                            </textView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="備註" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="KrW-QC-QQS">
+                                <rect key="frame" x="169" y="169" width="35" height="21"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="kuz-aT-gbw">
+                                <rect key="frame" x="99" y="125" width="176" height="30"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <color key="backgroundColor" red="0.87076961990000001" green="1" blue="0.99308544399999998" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <state key="normal" title="選擇菜單"/>
+                                <connections>
+                                    <action selector="selectMenu:" destination="ozw-wK-9pk" eventType="touchUpInside" id="7cd-wY-Sm0"/>
+                                </connections>
+                            </button>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="已選擇" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Dfx-RH-bIK">
+                                <rect key="frame" x="-1" y="308" width="375" height="30"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="fsc-Xd-FAX">
+                                <rect key="frame" x="0.0" y="578" width="375" height="40"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <color key="backgroundColor" red="0.87076961990000001" green="1" blue="0.99308544399999998" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <state key="normal" title="確認送出"/>
+                                <connections>
+                                    <action selector="sentOrder:" destination="ozw-wK-9pk" eventType="touchUpInside" id="4JW-t3-MfU"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <viewLayoutGuide key="safeArea" id="bpL-yW-wPH"/>
+                        <variation key="default">
+                            <mask key="subviews">
+                                <exclude reference="lnQ-xX-zXj"/>
+                                <exclude reference="KrW-QC-QQS"/>
+                            </mask>
+                        </variation>
+                    </view>
+                    <tabBarItem key="tabBarItem" systemItem="more" id="LKd-vX-c6f"/>
+                    <navigationItem key="navigationItem" title="Title" id="oZH-Gg-YBo"/>
+                    <connections>
+                        <outlet property="nameText" destination="KNY-ta-kq6" id="ZHC-kt-3d6"/>
+                        <outlet property="textView" destination="lnQ-xX-zXj" id="bpJ-I9-7RP"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Tei-xY-2tf" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1453.5999999999999" y="1012.4437781109445"/>
+        </scene>
+        <!--Fetch Order Controller-->
+        <scene sceneID="M1C-PQ-Wh7">
+            <objects>
+                <viewController id="7Wd-dm-kKv" customClass="FetchOrderController" customModule="FatTogether" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="xhB-HG-D06">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <viewLayoutGuide key="safeArea" id="Axf-vD-Kxg"/>
+                    </view>
+                    <tabBarItem key="tabBarItem" systemItem="featured" id="S8a-ZV-GIh"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="1jE-YA-mBy" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="476" y="1780"/>
+        </scene>
+        <!--店家選擇-->
+        <scene sceneID="5Ud-Si-rOy">
+            <objects>
+                <viewController id="Nk8-Uw-Vhv" customClass="SelectShopController" customModule="FatTogether" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="3zO-MV-g8F">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <viewLayoutGuide key="safeArea" id="ena-IG-7i9"/>
+                    </view>
+                    <navigationItem key="navigationItem" title="店家選擇" id="yvy-I0-xt0">
+                        <barButtonItem key="rightBarButtonItem" systemItem="add" id="1Rq-gj-8y2">
+                            <connections>
+                                <segue destination="b8Y-k9-OrA" kind="show" id="kaf-8c-GDH"/>
+                            </connections>
+                        </barButtonItem>
+                    </navigationItem>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="ja4-sN-FX5" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1169" y="133"/>
+        </scene>
+        <!--新增店家-->
+        <scene sceneID="ASi-IO-e3a">
+            <objects>
+                <viewController id="b8Y-k9-OrA" customClass="AddShopController" customModule="FatTogether" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="2iX-eN-vSV">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="iPS-v2-KEY">
+                                <rect key="frame" x="0.0" y="617" width="375" height="50"/>
+                                <color key="backgroundColor" red="0.87076961990000001" green="1" blue="0.99308544399999998" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="50" id="Xw3-GQ-xkG"/>
+                                </constraints>
+                                <state key="normal" title="送出"/>
+                                <connections>
+                                    <action selector="addShop:" destination="b8Y-k9-OrA" eventType="touchUpInside" id="hiu-zr-dAk"/>
+                                </connections>
+                            </button>
+                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="twf-m0-zSZ">
+                                <rect key="frame" x="125" y="92" width="125" height="30"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="125" id="2s0-ip-ckx"/>
+                                </constraints>
+                                <nil key="textColor"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="店名" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="UDm-Dl-N0Q">
+                                <rect key="frame" x="0.0" y="92" width="125" height="29"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="價錢" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="amg-T7-dpm">
+                                <rect key="frame" x="187.5" y="147" width="187.5" height="37"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="37" id="c9N-46-zSf"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="名稱" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="cad-MO-e0m">
+                                <rect key="frame" x="0.0" y="147" width="187.5" height="37"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="37" id="Udi-iJ-ECD"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="Ok4-xL-6o4">
+                                <rect key="frame" x="30" y="199" width="100" height="30"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="30" id="GZA-TM-ORg"/>
+                                    <constraint firstAttribute="width" constant="100" id="Z7q-Zq-TSK"/>
+                                </constraints>
+                                <nil key="textColor"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
+                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="Lcm-UI-nsD">
+                                <rect key="frame" x="245" y="199" width="100" height="30"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="30" id="EYL-nc-8fy"/>
+                                    <constraint firstAttribute="width" constant="100" id="zZU-6h-z1F"/>
+                                </constraints>
+                                <nil key="textColor"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits" keyboardType="numberPad"/>
+                            </textField>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="5r5-FV-EUq">
+                                <rect key="frame" x="156.5" y="272" width="62" height="30"/>
+                                <color key="backgroundColor" red="0.87076961990000001" green="1" blue="0.99308544399999998" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <state key="normal" title="新增菜單"/>
+                                <connections>
+                                    <action selector="addMenu:" destination="b8Y-k9-OrA" eventType="touchUpInside" id="UHO-4l-9zV"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="amg-T7-dpm" firstAttribute="trailing" secondItem="lo1-fF-Aio" secondAttribute="trailing" id="09h-vO-WXO"/>
+                            <constraint firstItem="5r5-FV-EUq" firstAttribute="top" secondItem="Lcm-UI-nsD" secondAttribute="bottom" constant="43" id="3sY-bB-7b1"/>
+                            <constraint firstItem="amg-T7-dpm" firstAttribute="leading" secondItem="cad-MO-e0m" secondAttribute="trailing" id="5St-Eg-wcn"/>
+                            <constraint firstItem="cad-MO-e0m" firstAttribute="top" secondItem="twf-m0-zSZ" secondAttribute="bottom" constant="25" id="8t2-1w-PU7"/>
+                            <constraint firstItem="twf-m0-zSZ" firstAttribute="centerX" secondItem="2iX-eN-vSV" secondAttribute="centerX" id="96Y-tI-oq5"/>
+                            <constraint firstItem="iPS-v2-KEY" firstAttribute="leading" secondItem="lo1-fF-Aio" secondAttribute="leading" id="Gfm-5m-vRb"/>
+                            <constraint firstItem="amg-T7-dpm" firstAttribute="top" secondItem="twf-m0-zSZ" secondAttribute="bottom" constant="25" id="IRs-4v-SyS"/>
+                            <constraint firstItem="cad-MO-e0m" firstAttribute="leading" secondItem="lo1-fF-Aio" secondAttribute="leading" id="MBt-EY-J0k"/>
+                            <constraint firstItem="UDm-Dl-N0Q" firstAttribute="centerY" secondItem="twf-m0-zSZ" secondAttribute="centerY" id="NjD-KM-KMo"/>
+                            <constraint firstItem="amg-T7-dpm" firstAttribute="height" secondItem="cad-MO-e0m" secondAttribute="height" id="Q87-k0-tob"/>
+                            <constraint firstItem="Lcm-UI-nsD" firstAttribute="width" secondItem="Ok4-xL-6o4" secondAttribute="width" id="T0Q-jP-EOv"/>
+                            <constraint firstItem="Ok4-xL-6o4" firstAttribute="leading" secondItem="lo1-fF-Aio" secondAttribute="leading" constant="30" id="TdF-kW-GoE"/>
+                            <constraint firstItem="Ok4-xL-6o4" firstAttribute="top" secondItem="cad-MO-e0m" secondAttribute="bottom" constant="15" id="Tx2-b2-cXw"/>
+                            <constraint firstItem="iPS-v2-KEY" firstAttribute="trailing" secondItem="lo1-fF-Aio" secondAttribute="trailing" id="UBS-3h-x6y"/>
+                            <constraint firstItem="Lcm-UI-nsD" firstAttribute="height" secondItem="Ok4-xL-6o4" secondAttribute="height" id="WCO-t6-1Bs"/>
+                            <constraint firstItem="lo1-fF-Aio" firstAttribute="trailing" secondItem="Lcm-UI-nsD" secondAttribute="trailing" constant="30" id="gte-bX-DjS"/>
+                            <constraint firstItem="UDm-Dl-N0Q" firstAttribute="leading" secondItem="lo1-fF-Aio" secondAttribute="leading" id="itM-3f-uUk"/>
+                            <constraint firstItem="amg-T7-dpm" firstAttribute="width" secondItem="cad-MO-e0m" secondAttribute="width" id="jy6-mx-13k"/>
+                            <constraint firstItem="twf-m0-zSZ" firstAttribute="top" secondItem="lo1-fF-Aio" secondAttribute="top" constant="28" id="qGS-ol-YeE"/>
+                            <constraint firstItem="5r5-FV-EUq" firstAttribute="centerX" secondItem="2iX-eN-vSV" secondAttribute="centerX" id="uXr-8W-Hew"/>
+                            <constraint firstItem="Lcm-UI-nsD" firstAttribute="top" secondItem="amg-T7-dpm" secondAttribute="bottom" constant="15" id="uoT-be-OAZ"/>
+                            <constraint firstItem="iPS-v2-KEY" firstAttribute="bottom" secondItem="lo1-fF-Aio" secondAttribute="bottom" id="w2P-Eh-0Nw"/>
+                            <constraint firstItem="UDm-Dl-N0Q" firstAttribute="height" secondItem="twf-m0-zSZ" secondAttribute="height" constant="-1" id="yXV-Xz-oHe"/>
+                            <constraint firstItem="twf-m0-zSZ" firstAttribute="leading" secondItem="UDm-Dl-N0Q" secondAttribute="trailing" id="zdy-lU-z6L"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="lo1-fF-Aio"/>
+                    </view>
+                    <navigationItem key="navigationItem" title="新增店家" id="kyB-Y5-dOn"/>
+                    <connections>
+                        <outlet property="menuNameTextField" destination="Ok4-xL-6o4" id="lHE-NY-Zz6"/>
+                        <outlet property="menuPriceTextField" destination="Lcm-UI-nsD" id="YWp-3x-JXD"/>
+                        <outlet property="shopNameTextField" destination="twf-m0-zSZ" id="f2g-Mf-sRO"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Lir-eC-nWd" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1882" y="133"/>
+        </scene>
+        <!--Navigation Controller-->
+        <scene sceneID="pEn-xa-8Xl">
+            <objects>
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="IaI-XF-Jqk" sceneMemberID="viewController">
+                    <toolbarItems/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="N6E-tr-zgz">
+                        <rect key="frame" x="0.0" y="20" width="375" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="BYZ-38-t0r" kind="relationship" relationship="rootViewController" id="rNn-7x-IfG"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="tEL-Lr-H56" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-300" y="133"/>
+        </scene>
+        <!--Order Tab Bar Controller-->
+        <scene sceneID="iGN-6d-jAb">
+            <objects>
+                <tabBarController automaticallyAdjustsScrollViewInsets="NO" id="gdp-Qj-rpA" customClass="OrderTabBarController" customModule="FatTogether" customModuleProvider="target" sceneMemberID="viewController">
+                    <toolbarItems/>
+                    <navigationItem key="navigationItem" id="DRU-On-vfp"/>
+                    <tabBar key="tabBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="omH-8d-ZOj">
+                        <rect key="frame" x="0.0" y="0.0" width="1000" height="1000"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                    </tabBar>
+                    <connections>
+                        <segue destination="ozw-wK-9pk" kind="relationship" relationship="viewControllers" id="Uah-gQ-kDp"/>
+                        <segue destination="7Wd-dm-kKv" kind="relationship" relationship="viewControllers" id="vZW-e6-5XQ"/>
+                    </connections>
+                </tabBarController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="fEC-AX-QQG" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="476" y="1013"/>
         </scene>
     </scenes>
 </document>
