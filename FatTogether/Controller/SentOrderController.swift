@@ -51,6 +51,7 @@ class SentOrderController: UIViewController, UITableViewDelegate, UITableViewDat
         let post = ["content": self.tableViewArray]
         let childUpdates = ["/\(orderID)/list/\(nameText.text!)/": post]
         ref.updateChildValues(childUpdates)
+        _ = self.tabBarController?.selectedIndex = 1
         }
     }
     

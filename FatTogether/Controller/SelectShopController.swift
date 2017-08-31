@@ -85,10 +85,6 @@ class SelectShopController: UIViewController, UITableViewDelegate, UITableViewDa
             (action : UIAlertAction!) -> Void in
         })
         
-        alertController.addTextField { (textField : UITextField!) -> Void in
-            textField.placeholder = "Enter Team Name"
-        }
-        
         alertController.addAction(saveAction)
         alertController.addAction(cancelAction)
         
