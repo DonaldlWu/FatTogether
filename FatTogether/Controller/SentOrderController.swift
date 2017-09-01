@@ -110,15 +110,15 @@ class SentOrderController: UIViewController, UITableViewDelegate, UITableViewDat
         
         let saveAction = UIAlertAction(title: "OK", style: .default, handler: {
             alert -> Void in
-            
             let firstTextField = alertController.textFields![0] as UITextField
-            if firstTextField.text! != "" {
-                self.tableViewArray.append(name+"-"+firstTextField.text!)
-                DispatchQueue.main.async {
-                    self.tableView.reloadData()
-                }
+            if firstTextField.text == "" {
+                self.tableViewArray.append(name)
             } else {
-                return
+                self.tableViewArray.append(name+"-"+firstTextField.text!)
+            }
+            
+            DispatchQueue.main.async {
+                self.tableView.reloadData()
             }
             
         })
