@@ -137,4 +137,19 @@ class SentOrderController: UIViewController, UITableViewDelegate, UITableViewDat
         self.present(alertController, animated: true, completion: nil)
     }
     
+    func tableView(_ tableView: UITableView, editActionsForRowAt indexPath: IndexPath) -> [UITableViewRowAction]? {
+        
+        let indexPath = IndexPath(item: indexPath.row, section: 0)
+        let cancel = UITableViewRowAction(style: .normal, title: "移除") { action, index in
+            self.tableView?.isEditing = false
+            self.tableViewArray.remove(at: indexPath.row)
+            DispatchQueue.main.async {
+                self.tableView.reloadData()
+            }
+        }
+        cancel.backgroundColor = .red
+        
+        return [cancel]
+    }
+    
 }
