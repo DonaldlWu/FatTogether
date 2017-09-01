@@ -29,6 +29,7 @@ class FetchOrderController: UIViewController, UITableViewDelegate, UITableViewDa
         tableView.leftAnchor.constraint(equalTo: view.leftAnchor).isActive = true
         tableView.rightAnchor.constraint(equalTo: view.rightAnchor).isActive = true
         tableView.bottomAnchor.constraint(equalTo: view.bottomAnchor).isActive = true
+        
         fetchOrderList()
     }
     

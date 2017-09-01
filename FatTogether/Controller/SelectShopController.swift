@@ -68,7 +68,7 @@ class SelectShopController: UIViewController, UITableViewDelegate, UITableViewDa
     }
     
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
-        let alertController = UIAlertController(title: "確定開團", message: "", preferredStyle: .alert)
+        let alertController = UIAlertController(title: "確定開新團？", message: "", preferredStyle: .alert)
         
         let saveAction = UIAlertAction(title: "OK", style: .default, handler: {
             alert -> Void in

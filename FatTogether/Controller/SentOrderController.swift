@@ -19,8 +19,6 @@ class SentOrderController: UIViewController, UITableViewDelegate, UITableViewDat
     
     @IBOutlet weak var nameText: UITextField!
     @IBAction func selectMenu(_ sender: Any) {
-        
-    
         let alertController = UIAlertController(title: "MENU", message: nil, preferredStyle: .actionSheet)
         for i in 0...self.menuNameArray.count - 1 {
         let name = "\(self.menuNameArray[i])-\(self.menuPriceArray[i])$"
@@ -44,7 +42,7 @@ class SentOrderController: UIViewController, UITableViewDelegate, UITableViewDat
             guard let orderID = UserDefaults.standard.string(forKey: "orderID") else {
             return
         }
-            let ref = Database.database().reference().child("Order")
+        let ref = Database.database().reference().child("Order")
         let post = ["content": self.tableViewArray]
         let childUpdates = ["/\(orderID)/list/\(nameText.text!)/": post]
         ref.updateChildValues(childUpdates)
