@@ -18,19 +18,15 @@ class SentOrderController: UIViewController, UITableViewDelegate, UITableViewDat
     var tableViewArray = [String]()
     
     @IBOutlet weak var nameText: UITextField!
-    @IBOutlet weak var textView: UITextView!
     @IBAction func selectMenu(_ sender: Any) {
-
         
-        let alertController = UIAlertController(title: "甜度冰塊請先填寫下方備註欄後再選擇飲料\n非常感謝囧RZ", message: nil, preferredStyle: .actionSheet)
+    
+        let alertController = UIAlertController(title: "MENU", message: nil, preferredStyle: .actionSheet)
         for i in 0...self.menuNameArray.count - 1 {
-        let name = "\(self.menuNameArray[i])-\(self.menuPriceArray[i])$ "
+        let name = "\(self.menuNameArray[i])-\(self.menuPriceArray[i])$"
             let position = UIAlertAction(title: name, style: .default, handler: {
                 alert -> Void in
-                self.tableViewArray.append(name + self.textView.text)
-                DispatchQueue.main.async {
-                    self.tableView.reloadData()
-                }
+                self.saveOrderToTable(name: name)
             })
             alertController.addAction(position)
         }
@@ -109,6 +105,38 @@ class SentOrderController: UIViewController, UITableViewDelegate, UITableViewDat
         cell.textLabel?.adjustsFontSizeToFitWidth = true
         cell.textLabel?.text = self.tableViewArray[indexPath.row]
         return cell
+    }
+
+    func saveOrderToTable(name: String) {
+        let alertController = UIAlertController(title: "備註", message: "", preferredStyle: .alert)
+        
+        let saveAction = UIAlertAction(title: "OK", style: .default, handler: {
+            alert -> Void in
+            
+            let firstTextField = alertController.textFields![0] as UITextField
+            if firstTextField.text! != "" {
+                self.tableViewArray.append(name+"-"+firstTextField.text!)
+                DispatchQueue.main.async {
+                    self.tableView.reloadData()
+                }
+            } else {
+                return
+            }
+            
+        })
+        
+        let cancelAction = UIAlertAction(title: "Cancel", style: .default, handler: {
+            (action : UIAlertAction!) -> Void in
+        })
+        
+        alertController.addTextField { (textField : UITextField!) -> Void in
+            textField.placeholder = "備註"
+        }
+        
+        alertController.addAction(saveAction)
+        alertController.addAction(cancelAction)
+        
+        self.present(alertController, animated: true, completion: nil)
     }
     
 }
